@@ -3,18 +3,25 @@ import { Component, OnInit } from '@angular/core';
 //Para poder trabajar con las Rutas
 import {Router, ActivatedRoute, Params} from '@angular/router';
 
+//Importar un servicio
+import {ClienteService} from '../services/cliente.service';
+
 @Component({
   selector: 'app-reserva',
   templateUrl: './reserva.component.html',
-  styleUrls: ['./reserva.component.css']
+  styleUrls: ['./reserva.component.css'],
+  providers: [ClienteService]
 })
 export class ReservaComponent implements OnInit {
 
   public parametro;
-
+  public listado_clientes: Array<String>;
+  public cliente: String;
   constructor(
     private _route: ActivatedRoute,
-    private _router: Router
+    private _router: Router,
+
+    private _clienteService: ClienteService
   ) { }
 
   ngOnInit() {
@@ -22,11 +29,24 @@ export class ReservaComponent implements OnInit {
     this._route.params.forEach((params: Params) => {
       this.parametro = params['page'];
     });
+
+    this._clienteService.prueba();
+
+    this.listado_clientes = this._clienteService.getClientes();
   }
 
   redirigir(){
     //Redirigir rutas
     this._router.navigate(['/reserva','parametro']);
+  }
+
+  sumarCliente(){
+    this._clienteService.addCliente(this.cliente);
+    this.cliente=null;
+  }
+
+  eliminarCliente(index:number){
+    this._clienteService.delCliente(index);
   }
 
 }

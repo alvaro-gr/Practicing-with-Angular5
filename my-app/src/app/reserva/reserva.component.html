@@ -9,3 +9,18 @@
 <p *ngIf="!parametro">
   <button (click)="redirigir()">Redirigir</button>
 </p>
+
+<br/>
+<br/>
+
+<input type="text" [(ngModel)]="cliente">
+<button (click)="sumarCliente()">Añadir Cliente</button>
+
+<h4> Clientes </h4>
+
+<ul>
+  <li *ngFor="let cliente of listado_clientes; let i = index">
+          {{cliente}}
+          <button (click)="eliminarCliente(i)">Eliminar</button>
+  </li>
+</ul>
