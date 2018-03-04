@@ -17,12 +17,16 @@ export class ReservaComponent implements OnInit {
   public parametro;
   public listado_clientes: Array<String>;
   public cliente: String;
-  constructor(
-    private _route: ActivatedRoute,
-    private _router: Router,
+  public fecha: Date;
 
-    private _clienteService: ClienteService
-  ) { }
+  constructor(
+      private _route :  ActivatedRoute,
+      private _clienteService: ClienteService,
+      private _router : Router
+  ) {
+      this.fecha = new Date(2018,2,3);
+
+  }
 
   ngOnInit() {
     //Para recojer todos los parametros (Funcion "tipo flecha lo mismo que la tipica funcion callback")

@@ -9,13 +9,16 @@ import { BookComponent } from './book/book.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReservaComponent } from './reserva/reserva.component';
 
+import { ConversorPipe } from './pipes/conversor.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BookComponent,
     NavbarComponent,
-    ReservaComponent
+    ReservaComponent,
+    ConversorPipe
   ],
   imports: [
     BrowserModule,
