@@ -25,7 +25,6 @@ export class ReservaComponent implements OnInit {
       private _router : Router
   ) {
       this.fecha = new Date(2018,2,3);
-
   }
 
   ngOnInit() {

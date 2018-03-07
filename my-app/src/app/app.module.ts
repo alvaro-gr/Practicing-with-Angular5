@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ReservaComponent } from './reserva/reserva.component';
 
 import { ConversorPipe } from './pipes/conversor.pipe';
+import { ContactoComponent } from './contacto/contacto.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ConversorPipe } from './pipes/conversor.pipe';
     BookComponent,
     NavbarComponent,
     ReservaComponent,
-    ConversorPipe
+    ConversorPipe,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+<h4> Contacto </h4>
+
+<form #formContacto="ngForm" (ngSubmit)="enviar(); formContacto.reset();">
+  <p>
+  <label>Nombre:</label>
+  <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="contacto.nombre" required>
+  <span *ngIf="nombre.touched && !nombre.valid">
+      Nombre incorrecto!
+  </span>
+  </p>
+  <p>
+  <label>Tema:</label>
+  <input type="text" name="tema" #tema="ngModel" [(ngModel)]="contacto.tema" required>
+  </p>
+  <p>
+  <label>Mensaje:</label>
+  <input type="text" name="mensaje" #mensaje="ngModel" [(ngModel)]="contacto.mensaje" required>
+  </p>
+  <p>
+  <label>Email:</label>
+  <input type="textarea" name="email" #email="ngModel" [(ngModel)]="contacto.email" required>
+  </p>
+  <input type="submit" value="Enviar">
+</form>
