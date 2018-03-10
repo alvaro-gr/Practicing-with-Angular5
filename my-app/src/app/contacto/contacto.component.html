@@ -22,3 +22,13 @@
   </p>
   <input type="submit" value="Enviar">
 </form>
+
+<br/>
+
+<h3>Listado de Articulos</h3>
+
+<ul>
+  <li *ngFor="let articulo of articulos">
+      {{articulo.title}}
+  </li>
+</ul>
