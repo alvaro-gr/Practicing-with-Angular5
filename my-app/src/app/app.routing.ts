@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BookComponent } from './book/book.component';
 import { ReservaComponent } from './reserva/reserva.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { TemplatesComponent } from './templates/templates.component';
 
 //Rutas
 const appRoutes: Routes = [
@@ -13,6 +14,7 @@ const appRoutes: Routes = [
   {path: 'reserva', component: ReservaComponent},
   {path: 'reserva/:page', component: ReservaComponent},
   {path: 'contacto', component: ContactoComponent},
+  {path: 'templates', component: TemplatesComponent},
   {path: '**', component: BookComponent} //Cuando ocurre un error
 ];
 

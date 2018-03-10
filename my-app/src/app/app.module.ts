@@ -9,7 +9,8 @@ import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ReservaComponent } from './reserva/reserva.component';
-import { ContactoComponent } from './contacto/contacto.component'
+import { ContactoComponent } from './contacto/contacto.component';
+import { TemplatesComponent } from './templates/templates.component';
 
 import { ConversorPipe } from './pipes/conversor.pipe';
 ;
@@ -22,7 +23,8 @@ import { ConversorPipe } from './pipes/conversor.pipe';
     NavbarComponent,
     ReservaComponent,
     ConversorPipe,
-    ContactoComponent
+    ContactoComponent,
+    TemplatesComponent
   ],
   imports: [
     BrowserModule,

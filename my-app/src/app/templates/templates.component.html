@@ -1,0 +1,12 @@
+<h4>{{titulo}}</h4>
+
+<div *ngIf="administrador; then Admin else noAdmin">
+</div>
+
+<ng-template #Admin>
+    <strong style="background:blue;">Eres el Administrador</strong>
+</ng-template>
+
+<ng-template #noAdmin>
+    <strong style="background:red;">No eres el Administrador</strong>
+</ng-template>
